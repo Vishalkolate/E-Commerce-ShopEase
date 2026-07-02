@@ -1,6 +1,6 @@
 
 
-import React, { useState } from "react";
+import  { useState } from "react";
 
 function EditProfileModal({ show, setShow, user, setUser }) {
     const [formData, setFormData] = useState(user);
