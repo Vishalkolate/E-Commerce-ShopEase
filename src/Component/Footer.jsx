@@ -1,4 +1,4 @@
-import { RiFacebookCircleFill, RiInstagramFill } from "@remixicon/react";
+// import { RiFacebookCircleFill, RiInstagramFill } from "@remixicon/react";
 import { Link } from "react-router-dom";
 import confetti from "canvas-confetti";
 import { useState } from "react";
@@ -13,27 +13,31 @@ function Footer() {
       return;
     }
 
-    confetti({ particleCount: 500, spread: 100,
+    confetti({
+      particleCount: 500, spread: 100,
       origin: { y: 0.7 },
     });
     setEmail("");
   };
   return (
-    <footer className="bg-gray-900 text-gray-300 mt-16">
+    <footer className="bg-gray-900 text-gray-300 mt-16 w-full overflow-x-hidden">
       <div className="border-b border-gray-800">
-        <div className="max-w-7xl mx-auto px-6 py-10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div>
               <h2 className="text-2xl font-bold text-white">Subscribe to our Newsletter </h2>
 
               <p className="text-gray-400 mt-2">Get updates about new products and special offers.</p>
             </div>
 
-            <div className="flex justify-center mt-10">
-              <input type="email" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)}
-                className="px-4 py-3 w-80 border rounded-l-lg outline-none " />
+            <div className="w-full lg:w-auto mt-6 lg:mt-0">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-0">
+                <input type="email" placeholder="Enter your email" value={email}  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full sm:w-80 lg:w-96 px-4 py-3 border rounded-lg sm:rounded-r-none outline-none text-black bg-white" />
 
-              <button onClick={handleSubscribe} className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-r-lg text-white font-semibold" > Subscribe </button>
+                <button onClick={handleSubscribe}
+                  className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg sm:rounded-l-none text-white font-semibold whitespace-nowrap"> Subscribe </button>
+              </div>
             </div>
           </div>
         </div>
@@ -114,7 +118,7 @@ function Footer() {
                 <i className="ri-twitter-x-line text-xl"></i>
               </Link>
 
-              <Link to="https://youtube.com" target="_blank"  rel="noopener noreferrer" className="bg-gray-800 p-3 rounded-full hover:bg-red-600 transition" >
+              <Link to="https://youtube.com" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-3 rounded-full hover:bg-red-600 transition" >
                 <i className="ri-youtube-fill text-xl"></i>
               </Link>
             </div>
