@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Navbar from "../Component/Navbar";
 import Footer from "../Component/Footer";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 function Checkout() {
@@ -111,7 +110,7 @@ function Checkout() {
               <h2 className="text-2xl font-bold mb-4">Order Summary</h2>
 
               {cartinfo.map((val, index) => (
-                <div className="border-b pb-5 mb-5">
+                <div key={index} className="border-b pb-5 mb-5">
                   <img src={val.product_img} className="w-full h-50 object-cover rounded-lg" />
 
                   <h3 className="text-2xl font-bold mt-5">{val.product_name} </h3>
