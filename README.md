@@ -22,3 +22,4 @@ If you are developing a production application, we recommend using TypeScript wi
 "# E-commerce-Shop-Ease" 
 "# E-commerce-Shop-Ease" 
 "# E-commerce-Shop-Ease" 
+"# E-Commerce-ShopEase" 
