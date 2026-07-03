@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import  { useState } from "react";
 import { Link } from "react-router-dom";
 import "remixicon/fonts/remixicon.css";
 
@@ -116,14 +116,14 @@ const Navbar = () => {
               <>
                 <li>
                   <Link to="/signin" onClick={() => setIsOpen(false)}
-                    className="bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-700" >
-                    <i className="ri-user-add-line mr-2"></i> Sign In</Link>
+                    className="bg-blue-500 px-3 py-2 rounded-lg hover:bg-blue-700" >
+                  Sign In</Link>
                 </li>
 
                 <li>
                   <Link to="/login" onClick={() => setIsOpen(false)}
-                    className="bg-orange-500 px-4 py-2 rounded-lg hover:bg-orange-700">
-                    <i className="ri-login-box-line mr-2"></i>Login</Link>
+                    className="bg-orange-500 px-3 py-2 ml-1 rounded-lg hover:bg-orange-700">
+                    Login</Link>
                 </li>
               </>
             )}
